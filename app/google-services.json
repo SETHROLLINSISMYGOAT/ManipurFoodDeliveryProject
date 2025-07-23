@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "163092862350",
+    "firebase_url": "https://to-do-list-app-c052b-default-rtdb.firebaseio.com",
+    "project_id": "to-do-list-app-c052b",
+    "storage_bucket": "to-do-list-app-c052b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163092862350:android:cb79770a1e706c4db7c0df",
+        "android_client_info": {
+          "package_name": "com.example.manipurdeliveryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu-6kHWJiWbfBmTD3mk3OX1wJzLMspfno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163092862350:android:c9a80f400beb6149b7c0df",
+        "android_client_info": {
+          "package_name": "com.example.smarttransporttracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu-6kHWJiWbfBmTD3mk3OX1wJzLMspfno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163092862350:android:205671fd5bf72775b7c0df",
+        "android_client_info": {
+          "package_name": "com.example.to_dolistapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu-6kHWJiWbfBmTD3mk3OX1wJzLMspfno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163092862350:android:e6993fdafd139f3fb7c0df",
+        "android_client_info": {
+          "package_name": "com.lifecoin.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu-6kHWJiWbfBmTD3mk3OX1wJzLMspfno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163092862350-ser1dc79e0qhesrhi3u52vvuno43kg8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
