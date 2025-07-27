@@ -21,4 +21,16 @@
     <color name="accent_color">#FF00C853</color>
 
     <color name="error_red">#D32F2F</color>
+
+
+
+
+
+
+    <color name="button_bg_light_gray">#F0F0F0</color>
+    <color name="red_error">#D32F2F</color>
+    <color name="light_gray_border">#D3D3D3</color>
+    <color name="dark_text_color">#333333</color>
+    <color name="orange_promo">#FF9800</color>
+    <color name="green_free">#4CAF50</color>
 </resources>

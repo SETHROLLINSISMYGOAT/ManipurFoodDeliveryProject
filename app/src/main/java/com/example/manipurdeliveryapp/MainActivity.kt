@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+
         binding.etEmail.text?.clear()
         binding.etPassword.text?.clear()
-
 
         binding.btnTogglePasswordVisibility.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
@@ -39,26 +39,33 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
 
+
         binding.tvRegister.setOnClickListener {
             startActivity(Intent(this, RegistrationActivity::class.java))
         }
 
-
         binding.btnGoogleLogin.setOnClickListener {
             Toast.makeText(this, "Google login clicked", Toast.LENGTH_SHORT).show()
+            // TODO: Implement Google Sign-In logic here
         }
+
 
     }
 
     private fun togglePasswordVisibility() {
         if (isPasswordVisible) {
-            binding.etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+
+            binding.etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+
             binding.btnTogglePasswordVisibility.setImageResource(R.drawable.ic_visibility_off)
         } else {
-            binding.etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+
+            binding.etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+
             binding.btnTogglePasswordVisibility.setImageResource(R.drawable.ic_visibility)
         }
-        binding.etPassword.setSelection(binding.etPassword.text.length)
+
+        binding.etPassword.setSelection(binding.etPassword.text?.length ?: 0)
     }
 
     private fun performLogin() {
@@ -84,10 +91,13 @@ class MainActivity : AppCompatActivity() {
             }
             else -> {
                 auth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener { task ->
+                    .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
 
+                            val intent = Intent(this, RestaurantListActivity::class.java)
+                            startActivity(intent)
+                            finish()
                         } else {
                             Toast.makeText(
                                 this,
