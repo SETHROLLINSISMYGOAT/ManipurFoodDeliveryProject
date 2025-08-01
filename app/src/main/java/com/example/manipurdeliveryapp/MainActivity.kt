@@ -44,10 +44,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RegistrationActivity::class.java))
         }
 
-        binding.btnGoogleLogin.setOnClickListener {
-            Toast.makeText(this, "Google login clicked", Toast.LENGTH_SHORT).show()
-            // TODO: Implement Google Sign-In logic here
-        }
+
 
 
     }
@@ -95,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
 
-                            val intent = Intent(this, RestaurantListActivity::class.java)
+                            val intent = Intent(this, DashboardActivity::class.java)
                             startActivity(intent)
                             finish()
                         } else {

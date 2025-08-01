@@ -40,6 +40,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+
     }
 }
 
@@ -53,18 +54,20 @@ dependencies {
 
 
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
 
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
-
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-auth:21.0.1")
     implementation("com.google.firebase:firebase-firestore:24.0.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("com.google.android.material:material:1.10.0")
-
-
+    implementation("com.google.android.material:material:1.x.x")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation(libs.places)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ManipurDeliveryApp</string>
+    <string name="_4_7">4.7</string>
+    <string name="free">Free</string>
+    <string name="_20_min">20 min</string>
+    <string name="spicy_restaurant">Spicy Restaurant</string>
+    <string name="maecenas_sed_diam_eget_risus_varius_blandit_sit_amet_non_magna_integer_posuere_erat_a_ante_venenatis_dapibus_posuere_velit_aliquet">Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</string>
+    <string name="burger">Burger</string>
+    <string name="sandwich">Sandwich</string>
+    <string name="pizza">Pizza</string>
+    <string name="sanwich">Sanwich</string> <string name="recommended_for_you">Recommended for you</string>
+    <string name="see_all">See all</string>
+    <string name="filter">Filter</string>
+    <string name="fast_delivery">Fast delivery</string>
+    <string name="try_something">Try something</string>
+    <string name="new_item">New item</string>
 
+    <string name="add_to_cart">Add to cart</string>
+    <string name="burger_bistro">Burger Bistro</string>
+    <string name="rose_garden">Rose Garden</string>
+    <string name="size_label">SIZE:</string>
+    <string name="size_r">R</string>
+    <string name="size_m">M</string>
+    <string name="size_l">L</string>
+    <string name="add_to_cart_full">Add To Cart</string>
 
     <string name="back_button_description">Back</string>
     <string name="toggle_password_visibility">Toggle password visibility</string>
+    <string-array name="revenue_periods">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
 
 
 </resources>
