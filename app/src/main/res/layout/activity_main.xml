@@ -133,35 +133,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp"/>
 
-    <Button
-        android:id="@+id/btnSignInAsDriver"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Sign In as Driver"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/dark_gray"
-        android:paddingVertical="12dp"
-        android:textSize="18sp"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
 
-    <Button
-        android:id="@+id/btnSignInAsRestaurantOwner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Sign In as Restaurant Owner"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/light_blue_bg"
-        android:paddingVertical="12dp"
-        android:textSize="18sp"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/btnSignInAsDriver"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -173,7 +147,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSignInAsRestaurantOwner"
+
         app:layout_constraintVertical_bias="1.0">
         <TextView
             android:id="@+id/tvNoAccount"

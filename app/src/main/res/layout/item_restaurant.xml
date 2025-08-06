@@ -80,13 +80,13 @@
                     android:layout_height="16dp"
                     android:src="@drawable/ic_delivery"
                     android:contentDescription="Delivery Icon"
-                    app:tint="@color/green_free" />
+                    app:tint="#FFA500" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Free delivery"
-                    android:textColor="@color/green_free"
+                    android:textColor="#40484E"
                     android:textSize="14sp"
                     android:layout_marginStart="4dp" />
             </LinearLayout>

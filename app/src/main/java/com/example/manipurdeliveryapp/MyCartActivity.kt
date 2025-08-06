@@ -1,6 +1,7 @@
 package com.example.manipurdeliveryapp
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
@@ -58,11 +59,18 @@ class MyCartActivity : AppCompatActivity() {
             Toast.makeText(this, "Proceeding to order!", Toast.LENGTH_SHORT).show()
 
         }
+        binding.btnOrderNowGlobal.setOnClickListener {
+            val intent = Intent(this, FilterActivity::class.java)
+
+            startActivity(intent)
+        }
+
+
 
         cartItems.add(CartItem(1, "Burger With Meat", 122.30, R.drawable.img_burger_placeholder, 1))
         cartItems.add(CartItem(2, "Ordinary Burgers", 122.30, R.drawable.img_burger_placeholder, 1))
 
-        // Setup RecyclerView
+
         binding.rvCartItems.layoutManager = LinearLayoutManager(this)
         cartAdapter = CartItemsAdapter(cartItems,
             onQuantityChanged = { item, newQuantity ->

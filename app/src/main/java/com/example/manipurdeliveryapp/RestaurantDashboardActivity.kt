@@ -25,7 +25,7 @@ class RestaurantDashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRestaurantDashboardBinding
     private lateinit var reviewAdapter: ReviewAdapter
 
-    // Simulated "real-time" data
+
     private var currentRunningOrders = 20
     private var isRestaurantOpen = true
     private var currentRevenue = 2241.0
@@ -56,7 +56,7 @@ class RestaurantDashboardActivity : AppCompatActivity() {
     }
 
     private fun setupUI() {
-        // Initial UI setup
+
         updateRunningOrdersUI()
         updateRestaurantStatusUI()
         updateRevenueUI()
@@ -73,29 +73,28 @@ class RestaurantDashboardActivity : AppCompatActivity() {
         }
         binding.spinnerRevenuePeriod.setSelection(0)
 
-        // Hide tooltip initially
+
         binding.tvGraphTooltip.visibility = View.GONE
     }
 
     private fun setupListeners() {
-        // Location dropdown click (simulated)
+
         binding.llLocation.setOnClickListener {
             Toast.makeText(this, "Location dropdown clicked", Toast.LENGTH_SHORT).show()
 
         }
 
-        // See Details for Revenue
         binding.tvSeeDetails.setOnClickListener {
             Toast.makeText(this, "See Revenue Details clicked", Toast.LENGTH_SHORT).show()
 
         }
 
-        // Spinner item selection listener
+
         binding.spinnerRevenuePeriod.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val selectedItem = parent.getItemAtPosition(position).toString()
                 Toast.makeText(this@RestaurantDashboardActivity, "Viewing data for: $selectedItem", Toast.LENGTH_SHORT).show()
-                // In a real app, you'd reload revenue data based on the selected period
+
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
@@ -107,7 +106,7 @@ class RestaurantDashboardActivity : AppCompatActivity() {
                     val x = event.x
                     val y = event.y
 
-                    // Simulate finding the closest data point based on X position
+
                     val graphWidth = v.width.toFloat()
                     val graphHeight = v.height.toFloat()
 
@@ -135,17 +134,16 @@ class RestaurantDashboardActivity : AppCompatActivity() {
                     binding.tvGraphTooltip.visibility = View.GONE
                 }
             }
-            true // Consume the touch event
+            true
         }
 
 
-        // See All Reviews
+
         binding.tvSeeAllReviews.setOnClickListener {
             Toast.makeText(this, "See All Reviews clicked", Toast.LENGTH_SHORT).show()
-            // Navigate to a dedicated reviews screen
+
         }
 
-        // Bottom Navigation View listeners
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_dashboard -> {
@@ -154,14 +152,13 @@ class RestaurantDashboardActivity : AppCompatActivity() {
                 }
                 R.id.nav_orders -> {
                     Toast.makeText(this, "Orders clicked", Toast.LENGTH_SHORT).show()
-                    // Navigate to OrdersListActivity (the right screen in your image)
-                    // startActivity(Intent(this, OrdersListActivity::class.java))
+
                     true
                 }
                 R.id.nav_add_item -> {
-                    // This could be a Floating Action Button style action
+
                     Toast.makeText(this, "Add New Item clicked", Toast.LENGTH_SHORT).show()
-                    // Show a dialog or navigate to AddItemActivity
+
                     true
                 }
                 R.id.nav_notifications -> {
@@ -170,7 +167,7 @@ class RestaurantDashboardActivity : AppCompatActivity() {
                 }
                 R.id.nav_profile -> {
                     Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
-                    // Navigate to ProfileActivity
+
                     true
                 }
                 else -> false
@@ -183,7 +180,7 @@ class RestaurantDashboardActivity : AppCompatActivity() {
             Review("John Doe", "20/12/2020", "Great Food and Service", 5, R.drawable.ic_person), // Use ic_person for placeholder
             Review("Jane Smith", "18/12/2020", "Fast delivery and delicious!", 4, R.drawable.ic_person),
             Review("Alex Johnson", "15/12/2020", "Portions could be bigger.", 3, R.drawable.ic_person)
-            // Add more mock reviews
+
         )
         reviewAdapter = ReviewAdapter(reviewsList)
         binding.rvReviews.apply {
@@ -192,12 +189,10 @@ class RestaurantDashboardActivity : AppCompatActivity() {
         }
     }
 
-    // --- Simulated Real-time Functions ---
 
     private fun updateRunningOrdersUI() {
         binding.tvRunningOrdersCount.text = currentRunningOrders.toString()
-        // Optional: Animate count change
-        // ObjectAnimator.ofInt(binding.tvRunningOrdersCount, "text", old_count, new_count).setDuration(500).start()
+
     }
 
     private fun updateRestaurantStatusUI() {
@@ -219,8 +214,8 @@ class RestaurantDashboardActivity : AppCompatActivity() {
 
     private fun simulateNewOrder() {
         currentRunningOrders++
-        currentRevenue += Random.nextDouble(50.0, 300.0) // Add random revenue
-        // Add a small random change to rating and total reviews
+        currentRevenue += Random.nextDouble(50.0, 300.0)
+
         if (Random.nextBoolean()) {
             currentRating = (currentRating * totalReviews + Random.nextInt(3, 5)) / (totalReviews + 1)
         }
@@ -232,9 +227,9 @@ class RestaurantDashboardActivity : AppCompatActivity() {
             Random.nextInt(4, 5),
             R.drawable.ic_person
         )
-        (reviewAdapter.reviews as MutableList<Review>).add(0, newReview) // Add to top
+        (reviewAdapter.reviews as MutableList<Review>).add(0, newReview)
         reviewAdapter.notifyItemInserted(0)
-        binding.rvReviews.scrollToPosition(0) // Scroll to the new review
+        binding.rvReviews.scrollToPosition(0)
 
         updateRunningOrdersUI()
         updateRevenueUI()
@@ -244,13 +239,11 @@ class RestaurantDashboardActivity : AppCompatActivity() {
     }
 
     private fun startSimulatedRealtimeUpdates() {
-        // This simulates new orders and updates the dashboard
-        Timer().schedule(5000, 5000) { // Delay 5 seconds, repeat every 5 seconds
+
+        Timer().schedule(5000, 5000) {
             runOnUiThread {
                 simulateNewOrder()
-                // You could also simulate restaurant status change, etc.
-                // isRestaurantOpen = !isRestaurantOpen // Toggle status occasionally
-                // updateRestaurantStatusUI()
+
             }
         }
     }

@@ -12,10 +12,11 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-
+    <color name="design_default_color_secondary">#1976D2</color>
     <color name="colorPrimary">#6200EE</color>
     <color name="blue_500">#2196F3</color>
     <color name="red">#FF0000</color>
+    <color name="colorAccent">#FF4081</color>
 
 
     <color name="primary_color">#FF0077B6</color>
@@ -51,7 +52,22 @@
     <color name="text_light_gray">#8A8A8A</color>
     <color name="green_status">#4CAF50</color>
 
+    <color name="green">#00B894</color>
+    <color name="blue">#0984E3</color>
+    <color name="gray">#B2BEC3</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="light_blue_50">#E8F2FC</color>
+
+    <color name="gray_background_color">#F5F5F5</color>
+    <color name="text_color_secondary">#808080</color>
+    <color name="divider_color">#E0E0E0</color>
     <color name="yellow_star">#FFC107</color>
     <color name="tooltip_color">#424242</color>
+
+
+
+    <color name="light_orange">#FF9800</color>
+    <color name="light_blue">#03A9F4</color>
     <color name="bottom_nav_selected_color">#FF5722</color> <color name="bottom_nav_unselected_color">#757575</color>
 </resources>

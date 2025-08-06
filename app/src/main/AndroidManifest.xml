@@ -58,6 +58,15 @@
             android:exported="false"/>
         <activity android:name=".FoodDetailActivity" />
         <activity android:name=".FoodDetailsActivity" />
+        <activity android:name=".FilterActivity"/>
+        <activity android:name=".PaymentSuccessActivity" />
+
+        <activity android:name=".HistoryActivity"/>
+        <activity android:name=".OngoingActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".MyAddressesActivity"/>
+        <activity android:name=".EditProfileActivity"/>
+        <activity android:name=".PersonalInfoActivity"/>
 
     </application>
 

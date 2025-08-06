@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -127,6 +128,7 @@
                     android:imeOptions="actionSearch"
                     android:paddingStart="8dp"
                     android:singleLine="true"
+                    android:inputType="text"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"
                     android:fontFamily="sans-serif"
@@ -152,24 +154,26 @@
                     android:textStyle="normal"
                     app:cornerRadius="30dp"
                     tools:ignore="UnusedAttribute" />
-
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_bar"
         app:layout_constraintTop_toBottomOf="@+id/searchLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="100dp">
+
 
             <TextView
                 android:id="@+id/tvTodayOffer"
@@ -213,7 +217,7 @@
                         android:minWidth="0dp"
                         android:minHeight="0dp"
                         android:paddingStart="17dp"
-                        android:paddingTop="7dp"
+                        android:paddingTop="3dp"
                         android:paddingEnd="17dp"
                         android:paddingBottom="7dp"
                         android:text="Order now"
@@ -240,7 +244,6 @@
                         android:layout_marginEnd="-16dp" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -297,6 +300,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -328,7 +332,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:scrollbars="none" >
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:id="@+id/recommended_filters_list"
@@ -400,6 +404,7 @@
                         android:layout_marginStart="15dp" />
                 </LinearLayout>
             </HorizontalScrollView>
+
             <LinearLayout
                 android:id="@+id/recommended_list"
                 android:layout_width="match_parent"
@@ -429,9 +434,71 @@
                     layout="@layout/item_recommended"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
-
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_navigation_background"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Home"
+                android:src="@drawable/ic_home_filled"
+                app:tint="@android:color/white"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageButton
+                android:id="@+id/btn_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="History"
+                android:src="@drawable/ic_history"
+                app:tint="@android:color/white"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageButton
+                android:id="@+id/btn_reorder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Reorder"
+                android:src="@drawable/ic_reorder"
+                app:tint="@android:color/white"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Profile"
+                android:src="@drawable/ic_profile"
+                app:tint="@android:color/white"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,8 @@
     <string name="fast_delivery">Fast delivery</string>
     <string name="try_something">Try something</string>
     <string name="new_item">New item</string>
-
+    <string name="content_description_forward_arrow">Forward arrow</string>
+    <string name="content_description_back_arrow">Back button</string>
     <string name="add_to_cart">Add to cart</string>
     <string name="burger_bistro">Burger Bistro</string>
     <string name="rose_garden">Rose Garden</string>
@@ -24,10 +25,34 @@
     <string name="size_m">M</string>
     <string name="size_l">L</string>
     <string name="add_to_cart_full">Add To Cart</string>
-
+    <string name="close_filter">Close Filter</string>
+    <string name="rating_star_1">Rating star 1</string>
+    <string name="rating_star_2">Rating star 2</string>
+    <string name="rating_star_3">Rating star 3</string>
+    <string name="rating_star_4">Rating star 4</string>
+    <string name="rating_star_5">Rating star 5</string>
     <string name="back_button_description">Back</string>
+
+    <string name="content_description_delete">Delete button</string>
+    <string name="my_orders">My Orders</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="history">History</string>
+    <string name="restaurant_logo_description">Restaurant Logo</string>
+    <string name="pizza_hut">Pizza Hut</string>
+    <string name="order_number">#162432</string>
+    <string name="order_price">$35.25</string>
+    <string name="item_count">03 Items</string>
+    <string name="track_order">Track Order</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="order_date_time">29 JAN, 12:30</string>
+    <string name="download_invoice">Download invoice</string>
+    <string name="re_order">Re order</string>
+    <string name="completed_status">Completed</string>
+    <string name="canceled_status">Canceled</string>
     <string name="toggle_password_visibility">Toggle password visibility</string>
     <string-array name="revenue_periods">
+
         <item>Daily</item>
         <item>Weekly</item>
         <item>Monthly</item>

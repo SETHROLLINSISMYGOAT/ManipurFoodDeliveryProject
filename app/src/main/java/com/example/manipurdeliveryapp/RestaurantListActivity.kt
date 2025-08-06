@@ -31,8 +31,11 @@ class RestaurantListActivity : AppCompatActivity() {
         }
 
 
+
         binding.btnCart.setOnClickListener {
-            val intent = Intent(this, MyCartActivity::class.java)
+            val intent = Intent(this, FoodDetailActivity::class.java)
+            intent.putExtra("FOOD_NAME", "Cheese burger")
+            intent.putExtra("FOOD_DESCRIPTION", "A cheeseburger is a hamburger with one or more slices of cheese placed on the meat patty.")
             startActivity(intent)
         }
 
@@ -46,10 +49,10 @@ class RestaurantListActivity : AppCompatActivity() {
             Restaurant("Curry House", 4.2, 300, R.drawable.img_restaurant_banner, "20-25 min", true)
         )
 
-        restaurantAdapter = RestaurantAdapter(restaurants) { restaurant ->
+        restaurantAdapter = RestaurantAdapter(restaurants) {
 
-            Toast.makeText(this, "Opening cart for items from ${restaurant.name}", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MyCartActivity::class.java)
+
+            val intent = Intent(this, FoodDetailActivity::class.java)
 
             startActivity(intent)
 
